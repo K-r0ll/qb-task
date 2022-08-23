@@ -5,6 +5,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.example.helpers.DateHelper;
 import org.example.models.CurrencyInfo;
+import org.example.services.ICurrencyService;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -14,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.Optional;
 
-public class CurrencyService {
+public class CurrencyService implements ICurrencyService {
 
     public CurrencyInfo getSingleCurrencyFromCsv() {
         URL url = null;

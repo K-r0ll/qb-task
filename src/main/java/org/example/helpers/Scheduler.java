@@ -1,4 +1,4 @@
 package org.example.helpers;
 
-public class Planner {
+public class Scheduler {
 }
