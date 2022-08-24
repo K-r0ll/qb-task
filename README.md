@@ -10,13 +10,13 @@ Dane historyczne dostępne są pod adresem https://stooq.pl/q/d/l/?s=usdeur&i=d 
 
 ## Środowisko
 
-- JDK 17
+- Zmienna środowiskowa JAVA_HOME musi być skonfigurowana na JDK 17
 
 ## Uruchomienie oraz konfiguracja
 
 Do zainstalowania zależności:
 ```bash
-mvn install
+mvn dependency:resolve
 
 ```
 Po zainstalowaniu zależności:
