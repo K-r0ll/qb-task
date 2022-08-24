@@ -5,14 +5,12 @@ import java.util.Date;
 
 public class CurrencyInfo {
     private String symbol;
-    private Date data;
-    private Date time;
+    private Date date;
     private BigDecimal closeRate;
 
     private CurrencyInfo(CurrencyInfoBuilder builder) {
         this.symbol = builder.symbol;
-        this.data = builder.data;
-        this.time = builder.time;
+        this.date = builder.date;
         this.closeRate = builder.closeRate;
     }
 
@@ -25,20 +23,13 @@ public class CurrencyInfo {
     }
 
     public Date getData() {
-        return data;
+        return date;
     }
 
     public void setData(Date data) {
-        this.data = data;
+        this.date = data;
     }
 
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
 
     public BigDecimal getCloseRate() {
         return closeRate;
@@ -52,16 +43,15 @@ public class CurrencyInfo {
     public String toString() {
         return "CurrencyInfo{" +
                 "symbol='" + symbol + '\'' +
-                ", data=" + data +
-                ", time=" + time +
+                ", data=" + date +
                 ", closeRate=" + closeRate +
                 '}';
     }
 
     public static class CurrencyInfoBuilder {
         private String symbol;
-        private Date data;
-        private Date time;
+        private Date date;
+
         private BigDecimal closeRate;
 
         public CurrencyInfoBuilder() {
@@ -72,15 +62,11 @@ public class CurrencyInfo {
             return this;
         }
 
-        public CurrencyInfoBuilder setData(Date data) {
-            this.data = data;
+        public CurrencyInfoBuilder setData(Date date) {
+            this.date = date;
             return this;
         }
 
-        public CurrencyInfoBuilder setTime(Date time) {
-            this.time = time;
-            return this;
-        }
 
         public CurrencyInfoBuilder setCloseRate(BigDecimal closeRate) {
             this.closeRate = closeRate;

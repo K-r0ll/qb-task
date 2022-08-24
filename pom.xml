@@ -47,8 +47,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
           <configuration>
-            <source>17</source>
-            <target>17</target>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.source}</target>
             <compilerArgs>
               --enable-preview
             </compilerArgs>
@@ -78,6 +78,14 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+            <mainClass>org.example.App</mainClass>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
